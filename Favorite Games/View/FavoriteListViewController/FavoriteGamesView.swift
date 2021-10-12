@@ -40,7 +40,7 @@ public class FavoriteGamesView: UIView {
     // MARK: - Functions
     private func makeTableView() -> UITableView {
         let tableView = UITableView()
-        tableView.rowHeight = 100
+        tableView.rowHeight = 200
         return tableView
     }
     
