@@ -22,10 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
-    private func favoriteGameVC() -> UIViewController {
-        let favorite = FavoriteGamesViewController()
-        favorite.title = "Favorite Games 💕"
-        return favorite
+    private func favoriteGameVC() -> UINavigationController {
+        let favoriteGames = FavoriteGamesViewController()
+        let navigationController = UINavigationController(rootViewController: favoriteGames)
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
